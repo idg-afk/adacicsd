@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Protected Page</title>
+  <style>
+    #protected-content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  // Ask for the password
+  var password = prompt("Enter the password:");
+
+  // Set your desired password here
+  var correctPassword = "letmein";
+
+  if (password === correctPassword) {
+    // Show the protected content
+    document.getElementById("protected-content").style.display = "block";
+  } else {
+    // Show access denied message
+    document.body.innerHTML = "<h1>Access Denied</h1><p>Wrong password.</p>";
+  }
+</script>
+
+<div id="protected-content">
+  <h1>Welcome!</h1>
+  <p>This is the secret content that only appears after the correct password is entered.</p>
+</div>
+
+</body>
+</html>
